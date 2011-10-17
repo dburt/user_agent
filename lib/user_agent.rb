@@ -222,4 +222,8 @@ class UserAgent
     self.class.eql?(other.class) && source == other.source
   end
   alias :== :eql?
+  
+  def hash
+    inspect.hash
+  end
 end
